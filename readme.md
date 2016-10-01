@@ -349,7 +349,7 @@ Lifting is when you take a value and put it into an object like a [functor](#poi
 Some implementations have a function called `lift`, or `liftA2` to make it easier to run functions on functors.
 
 ```js
-const liftA2 = (f) => (a, b) => a.map(f).ap(b)
+const liftA2 = (f) => (a, b) => a.map(f).map(b)
 
 const mult = a => b => a * b
 
@@ -424,7 +424,7 @@ const rand = function*() {
   }
 }
 ```
-
+x
 ```js
 const randIter = rand()
 randIter.next() // Each execution gives a random value, expression is evaluated on need.
